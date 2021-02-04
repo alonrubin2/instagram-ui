@@ -1,0 +1,9 @@
+@import '../variables.scss';
+
+.btn {
+    font-size: 1.6rem;
+}
+
+.btn:active {
+    transform: translateY(2px);
+}

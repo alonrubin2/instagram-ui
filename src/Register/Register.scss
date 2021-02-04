@@ -1,7 +1,74 @@
+@import '../sass/variables.scss';
+@import '../sass/components/components.scss';
+
 .Register {
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-size: 1.6rem;
 }
 
-.form-control {
-    width: 400px;
+h2 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
 }
+
+Form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $lightgrey;
+    width: 50rem;
+    height: 100rem;
+    box-shadow: 0 1.8rem 1.8rem .8rem;
+    border-radius: 8px;
+    background-color: $white;
+    box-sizing: border-box;
+}
+.form-control {
+    width: 40rem;
+    border-radius: 10rem;
+    background: $background-color;
+}
+
+label {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: .6rem;
+    margin-left: 1rem;
+}
+
+.form-check {
+    align-self: flex-start;
+    margin-left: 8rem;
+    font-size: 1.6rem;
+}
+.form-check-input {
+    margin-top: 2.4rem;
+    margin-bottom: .6rem;
+}
+
+.form-check-label {
+    font-size: 1.6rem;
+}
+
+.errMsg {
+    color: $error-color;
+    margin-left: 1.6rem;
+}
+
+img {
+    margin-top: 2rem;
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid $lightgrey;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px;
+}
+

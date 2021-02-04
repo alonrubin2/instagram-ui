@@ -3,17 +3,17 @@ const emailValidate = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"
 
 export const registerSchema = yup.object().shape({
     username: yup.string()
-        .min(3)
-        .max(16)
-        .required(),
+        .min(3, "The Username you have chosen is too short")
+        .max(16, "Username exceeds maximum length")
+        .required("Please choose a Username"),
     email: yup.string()
         .max(160)
         .matches(emailValidate, "Invalid Email Adress")
-        .required(),
+        .required("Please submit a valid Email address"),
     password: yup.string()
-        .min(8)
-        .max(16)
-        .required(),
+        .min(8, "The Password you have chosen is too short")
+        .max(16, "Password exceeds maximum length")
+        .required("Please submit a valid Password"),
     agreeToTerms: yup.mixed()
         .oneOf([true], "You must agree to Terms and Conditions")
 });
