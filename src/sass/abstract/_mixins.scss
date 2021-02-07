@@ -1,0 +1,14 @@
+@mixin  responsive($brakpoint) {
+    @if $brakpoint == phone {
+        @media (max-width: 480px) {@content};
+    }
+    @if $brakpoint == tablet {
+        @media (max-width: 768px) {@content};
+    }
+    @if $brakpoint == desktop {
+        @media (max-width: 1200px) {@content};
+    }
+    @if $brakpoint == bit-desktop {
+        @media (max-width: 1900px) {@content};
+    }
+}

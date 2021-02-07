@@ -1,6 +1,28 @@
-@import '../sass/variables.scss';
+@import '../sass/abstract/variables.scss';
+@import '../sass/abstract/mixins';
+@import '../sass/components/animations.scss';
 
 .Header {
     color: #0c0fd8;
-    // background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h1 {
+    margin-top: 2rem;
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    // background-image: linear-gradient(to right,
+    //         rgba($light-blue, 1),
+    //         rgba($lightgreen, 1));
+    // background-clip: text;
+    color: transparent;
+    letter-spacing: 2px;
+    // text-shadow: 0 2rem 2rem $black;
+    -webkit-text-stroke: 3px $black;
+    // animation: fadeIn 2.3s;
+    text-align: center;
 }

@@ -1,5 +1,7 @@
-@import '../sass/variables.scss';
+@import '../sass/abstract/variables.scss';
 @import '../sass/components/components.scss';
+@import '../sass/abstract/mixins';
+@import '../sass/components/animations.scss';
 
 .Register {
     text-align: left;
@@ -7,14 +9,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    // height: 80vh;
     font-size: 1.6rem;
+
+
+    
+    @include responsive(phone) {
+        width: 100%;
+        height: 80%;
+    }
+    @include responsive(tablet) {
+        width: 100%;
+    }
+
 }
 
 h2 {
     margin-top: 3rem;
     margin-bottom: 3rem;
     position: relative;
+    font-size: 5rem;
 }
 
 Form {
@@ -24,17 +38,42 @@ Form {
     align-items: center;
     border: 1px solid $lightgrey;
     width: 50rem;
-    height: 100rem;
+    // height: 100rem;
     box-shadow: 0 1.8rem 1.8rem .8rem;
     border-radius: 8px;
     background-color: $white;
     box-sizing: border-box;
+    animation: fadeIn 2s;
+    // transition: all 2s;
+    margin: 1rem;
+    margin-bottom: 2rem;
+
+
+
+    @include responsive(phone) {
+        width: 100%;
+        height: 80%;
+        justify-content: flex-start;
+        align-items: flex-start ;
+    }
+
 }
+
+
 .form-control {
     width: 40rem;
     border-radius: 10rem;
     background: $background-color;
+    @include responsive(phone) {
+        width: 110%;
+        float: left;
+        margin-left: 3rem;
+    }
+
 }
+
+
+
 
 label {
     font-size: 1.6rem;
@@ -42,12 +81,19 @@ label {
     margin-top: 2rem;
     margin-bottom: .6rem;
     margin-left: 1rem;
+    @include responsive(phone) {
+        width: 100%;
+        margin-left: 3.5rem;
+    }
 }
 
 .form-check {
     align-self: flex-start;
     margin-left: 8rem;
     font-size: 1.6rem;
+    @include responsive(phone) {
+        width: 70%;
+    }
 }
 .form-check-input {
     margin-top: 2.4rem;
@@ -56,11 +102,20 @@ label {
 
 .form-check-label {
     font-size: 1.6rem;
+    @include responsive(phone) {
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 .errMsg {
     color: $error-color;
     margin-left: 1.6rem;
+    @include responsive(phone) {
+        width: 100%;
+        margin-left: 3.5rem;
+        font-size: 1.2rem;
+    }
 }
 
 img {
@@ -70,5 +125,28 @@ img {
     border: 1px solid $lightgrey;
     border-radius: 50%;
     box-shadow: 0 3px 6px;
+    @include responsive(phone) {
+        width: 10rem;
+        align-self: center;
+    }
+}
+#email {
+    @include responsive(phone) {
+        width: 126%;
+        margin-left: 3rem;
+    }
+}
+#password {
+    @include responsive(phone) {
+        width: 112%;
+        margin-left: 3rem;
+    }
 }
 
+.btn {
+    @include responsive(phone) {
+        width: 70%;
+        margin-left: 11rem;
+
+    }
+}

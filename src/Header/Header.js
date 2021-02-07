@@ -6,7 +6,7 @@ function Header(props) {
 
     return (
         <header className="Header">
-            <h1>Instagram</h1>
+            <h1>Take Only Pictures</h1>
         </header>
     );
 }
