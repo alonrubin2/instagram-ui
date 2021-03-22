@@ -1,0 +1,13 @@
+@import '../../sass/abstract/variables.scss';
+
+.Map {
+    // border: 1px solid $grey;
+    border-radius: 8px;
+    height: 20rem;
+    width: 90%;
+
+    .map {
+        width: 100%;
+
+    }
+}

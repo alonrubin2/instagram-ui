@@ -1,0 +1,72 @@
+@import '../../sass/abstract/variables.scss';
+
+.Post {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .post-head {
+        display: flex;
+
+
+    }
+    .post-avatar {
+        margin-left: 1rem;
+        margin-top: 2rem;
+    }
+
+    .username {
+        margin-top: 0.5rem;
+    }
+    .description {
+        font-size: 1.6rem;
+        margin-left: 4rem;
+    }
+    hr {
+        width: 100%;
+        align-self: center;
+    }
+    .img {
+        width: 100%;
+        align-self: center;
+        height: 61.4rem;
+        margin-left: 0;
+        height: 100%;
+        @media (max-width: 1024px) {
+            width: 100%;
+            margin-left: 0;
+
+          }
+
+    }
+    .created-at {
+        margin-left: 2rem;
+        color: $black;
+        font-size: 1.2rem;
+    }
+    .link{
+        text-decoration: none;
+        // margin-bottom: 1rem;
+
+    }
+    a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $black;
+
+    }
+    .time-and-location {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        
+        .location {
+            margin-left: 2rem;
+            
+        }
+        
+    }
+
+}

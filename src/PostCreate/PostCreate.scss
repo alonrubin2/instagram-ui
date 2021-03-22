@@ -1,0 +1,180 @@
+@import '../sass/abstract/variables.scss';
+
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+}
+
+.CreatePost {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    background-color: $lightgrey;
+    margin-top: 8rem;
+
+
+    @media (max-width: 1024px) {
+        margin-top: 14rem;
+        width: 100%;
+        height: 100vh;
+    }
+
+    @media (max-width:615px) {
+        margin-top: 12rem;
+    }
+
+
+    @media (max-width:450px) {
+        width: 100%;
+        height: 100vh;
+
+    }
+}
+
+.post-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.create-headline {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    align-self: center;
+}
+
+.img-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    #upload-button {
+        width: 10rem;
+        font-size: 1.4rem;
+
+        @media (max-width: 615px) {
+            align-self: center;
+
+        }
+    }
+
+    #post-submit {
+        align-self: center;
+        margin: 2rem;
+    }
+}
+
+h3 {
+    font-family: "Staatliches";
+    font-size: 2rem;
+
+    @media (max-width: 750px) {
+        text-align: center;
+    }
+}
+
+.create-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 750px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+img {
+    border-radius: 8px;
+}
+
+.dont-show {
+    display: none;
+    width: 100%;
+}
+
+.upload-image {
+    display: flex;
+    flex-direction: column;
+    padding: 6px 12px;
+    justify-content: flex-start;
+    cursor: pointer;
+    margin: 1rem;
+    width: 100%;
+    // max-width: 20rem;
+    border-radius: 0.25rem;
+
+
+
+    .Map {
+        width: 100%;
+        border-radius: 8px;
+
+        @media (max-width: 750px) {
+            align-self: center;
+        }
+    }
+}
+
+
+textarea {
+    width: 50%;
+    height: 6rem;
+    background-color: $white;
+    font-size: 1.6rem;
+    align-self: flex-start;
+    border-radius: 8px;
+    @media (max-width: 750px) {
+        align-self: center;
+    }
+}
+
+// 
+
+.postErr {
+    color: $gold-orange;
+    font-size: 2rem;
+    margin-left: 2rem;
+
+}
+
+.about-box {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 750px) {
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+
+
+
+
+.img-area {
+    // height: 100vh;
+    width: 100%;
+    // border: 1px solid $black;
+    // margin-bottom: 1rem;
+    border-radius: 8px;
+    // filter: grayscale(100%);
+
+    @media (max-width: 1024px) {
+        // width: 100vh;
+        height: 30rem;
+        width: 80%;
+    }
+}

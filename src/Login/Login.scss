@@ -1,0 +1,64 @@
+@import '../sass/abstract/variables.scss';
+@import '../sass/components/components.scss';
+@import '~bootstrap';
+
+
+h1 {
+    font-size: 6rem;
+}
+
+.Login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 60%;
+    margin: 1.5rem;
+
+    form {
+        justify-self: center;
+        align-self: center;
+    }
+}
+
+h2 {
+    align-self: center;
+    font-size: 4rem;
+    margin-top: 2rem;
+}
+.loginErr {
+    color: $error-color;
+    margin-left: 6rem;
+    font-size: 1.6rem;
+    align-self: flex-start;
+}
+
+.errMsg {
+    font-size: 1.6rem;
+}
+
+.notMember {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+
+.btn.btn-success {
+    background-color: $green;
+    color: $white;
+    border: 1px solid $grey;
+}
+
+.btn.btn-success:hover {
+    background-color: lighten($green, 5%);
+
+}
+// .login-form {
+//     align-self: center;
+//     justify-self: center;
+
+// }
+
+
+
+

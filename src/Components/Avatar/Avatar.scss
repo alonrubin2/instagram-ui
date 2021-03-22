@@ -1,0 +1,24 @@
+@import '../../sass/abstract/variables.scss';
+
+
+.Avatar {
+    border-radius: 50%;
+    margin: 1rem;
+    border: 1px solid $grey;
+}
+
+
+.Avatar-sm {
+    width: 3rem;
+    height: 3rem;
+}
+
+.Avatar-md {
+    width: 4rem;
+    height: 4rem;
+}
+
+.Avatar-lg {
+    width: 12rem;
+    height: 12rem;
+}

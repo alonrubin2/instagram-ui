@@ -1,0 +1,25 @@
+@import '../../../sass/abstract/variables.scss';
+
+.Like {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.num-of-likes {
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.like {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.like-black {
+    color: $black;
+}
+
+.like-green {
+    color: $green;
+}

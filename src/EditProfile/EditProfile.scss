@@ -1,0 +1,46 @@
+@import '../sass/abstract/variables.scss';
+
+.EditProfile {
+    margin-top: 15%;
+
+    margin-top: 10rem;
+    @media (max-width:1024px) {
+        margin-top: 13rem;
+        width: 100%;
+
+      }
+    @media (max-width:615px) {
+        margin-top: 22rem;
+      }
+      h2 {
+          margin-top: 1rem;
+      }
+}
+
+.file-upload-btn {
+    display: flex;
+    padding: 6px 12px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 1rem;
+    width: 30%;
+    // max-width: 20rem;
+    border-radius: 10rem;
+    border: 1px solid $black;
+}
+
+
+.avatar-area {
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid $black;
+    border-radius: 50%;
+}
+.cancel {
+    margin-top: 1rem;
+}
+
+small {
+    margin-left: 5%;
+}

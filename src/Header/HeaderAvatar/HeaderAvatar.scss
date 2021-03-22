@@ -1,0 +1,33 @@
+@import '../../sass/abstract/variables.scss';
+
+
+.HeaderAvatar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        text-decoration: none;
+        color: $black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h3 {
+        color: $black;
+        font-size: 2rem;
+    }
+    .btn {
+        margin-left: 2rem;
+        align-self: center;
+        border-radius: 10rem;
+        background-color: $green;
+        border: 1px solid $grey;
+
+    }
+    .btn:hover {
+        background-color: lighten($green, 5%);
+        border: 1px solid $grey;
+
+    }
+}

@@ -3,14 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@googlemaps/js-api-loader": "^1.11.2",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
     "bootstrap": "^5.0.0-beta1",
+    "boxicons": "^2.0.7",
+    "cropperjs": "^1.5.11",
     "formik": "^2.2.6",
+    "js-cookie": "^2.2.1",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
     "react": "^17.0.1",
     "react-breakpoints": "^3.0.3",
     "react-dom": "^17.0.1",
+    "react-google-maps": "^9.4.5",
+    "react-image-crop": "^8.6.6",
+    "react-moment": "^1.1.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4",
     "yup": "^0.32.8"
@@ -40,6 +54,7 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.14.1"
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2"
   }
 }

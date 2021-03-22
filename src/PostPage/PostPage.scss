@@ -1,0 +1,55 @@
+@import '../sass/abstract/variables.scss';
+
+.PostPage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    margin-top: 7rem;
+    
+    @media (max-width: 1024px) {
+        margin-top: 11rem;
+        width: 100%;
+        // margin-top: 17%;
+    }
+    @media (max-width:615px) {
+        margin-top: 18rem;
+      }
+
+    .head-avatar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: $black;
+        }
+    }
+    .post-page-description {
+        font-size: 1.6rem;
+        margin: 2rem;
+    }
+
+    .created-at {
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        color: $black;
+        font-size: 1.2rem;
+    }
+    .time-and-location {
+        display: flex;
+        // align-items: center;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        
+        .location {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: $black;
+        }
+        
+    }
+}
