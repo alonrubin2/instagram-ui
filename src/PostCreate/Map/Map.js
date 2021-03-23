@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { GoogleMap, Marker, withGoogleMap, withScriptjs } from "react-google-maps"
 // import {MapContext} from '../../map-context';
+import mapKey from '../../keys';
 import './Map.scss';
 
 function Map(props) {

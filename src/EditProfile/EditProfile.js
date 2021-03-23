@@ -12,7 +12,8 @@ function EditProfile() {
 
     const history = useHistory();
     const { user, setUser } = useContext(UserContext);
-
+    const [counter, setCounter] = useState(0);
+    const [value, setValue] = useState('');
     const [imgPreview, setImgPreview] = useState('')
 
     function previewFile(file) {
@@ -21,17 +22,11 @@ function EditProfile() {
     }
 
     async function editProfile(values) {
-        // const body = {
-        //     username: values.username,
-        //     email: values.email,
-        //     image: data
-        // }
+
         try {
             const edditedUser = await UserService.edit(values);
-            // debugger;
             console.log(edditedUser);
             setUser(edditedUser);
-            // need to reload everything with new username and all. currently app crashes
             history.push(`/user/${edditedUser.username}`);
         }
         catch (err) {
@@ -42,6 +37,8 @@ function EditProfile() {
     function cancel() {
         history.push('/')
     }
+
+
 
 
     return (
@@ -55,7 +52,7 @@ function EditProfile() {
                         <h2>Edit your Profile</h2>
                         <div className="form-group">
                             <label htmlFor="username">Username</label>
-                            <Field className="form-control" id="username" name="username" placeholder={user.username}/>
+                            <Field className="form-control" id="username" name="username" placeholder={user.username} />
                             <ErrorMessage className="errMsg" name="username" component="div" />
                         </div>
 
@@ -67,8 +64,14 @@ function EditProfile() {
 
                         <div className="form-group">
                             <label htmlFor="bio">Bio</label>
-                            <Field type="text" className="form-control" id="bio" name="bio" placeholder="Tell us about yourself" />
-                            <small>200 keys</small>
+                            <Field
+                                // onChange={(e) => {
+                                // setCounter(counter+1);
+                                // setValue(e.target.value)}}
+                                type="text" className="form-control" id="bio" name="bio" placeholder="Tell us about yourself"
+                            //  value={value}
+                            />
+                            <small>{200 - counter} keys</small>
                             <ErrorMessage className="errMsg" name="bio" component="div" />
                         </div>
 
@@ -85,13 +88,14 @@ function EditProfile() {
                             <div>Upload File</div>
                         </label>
 
-                        <div className="form-group mt-3 mb-4">
-                            <button disabled={isSubmitting} className="btn btn-success" type="submit">
-                                {isSubmitting ? 'Updating...' : 'Update'}
-                            </button>
+                        <div className="form-group mt-3 mb-4 btn-box" >
                             <button className="cancel btn btn-danger" onClick={cancel}>
                                 Cancel
                                 </button>
+                            <button disabled={isSubmitting} className="btn btn-success" type="submit">
+                                {isSubmitting ? 'Updating...' : 'Update'}
+                            </button>
+
                         </div>
                     </Form>
                 )}

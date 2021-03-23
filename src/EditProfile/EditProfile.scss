@@ -1,9 +1,9 @@
 @import '../sass/abstract/variables.scss';
 
 .EditProfile {
-    margin-top: 15%;
+    // margin-top: 15%;
 
-    margin-top: 10rem;
+    // margin-top: 10rem;
     @media (max-width:1024px) {
         margin-top: 13rem;
         width: 100%;
@@ -37,10 +37,27 @@
     border: 1px solid $black;
     border-radius: 50%;
 }
-.cancel {
-    margin-top: 1rem;
+.btn-danger.cancel {
+    margin-right: 0;
+    // margin-left: auto;
+}
+button.btn-success {
+    margin: 0;
 }
 
 small {
     margin-left: 5%;
+}
+
+#bio {
+    text-align: start;
+    text-overflow: wrap;
+    // height: 6rem;
+}
+
+.form-group.btn-box {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

@@ -12,6 +12,7 @@ import { UserService } from '../services/user.service';
 function Profile() {
 
     const [posts, setPosts] = useState([]);
+    const [arePosts, setArePosts] = useState(true);
     const { username } = useParams();
 
 
@@ -20,6 +21,9 @@ function Profile() {
             try {
                 const posts = await PostService.getUserPosts(username)
                 setPosts(posts);
+                if (posts.length === 0) {
+                    setArePosts(false);
+                }
             }
             catch (err) {
                 console.log(err);
@@ -37,6 +41,7 @@ function Profile() {
                 username={username}
             />
             <div className="posts-box">
+                {!arePosts && <h2 className="no-posts">Show Us Where You've Been!</h2>}
                 {posts.map((post, index) => {
 
                     return <GalleryImage className="gallery-img"
@@ -45,6 +50,7 @@ function Profile() {
                         img={post.image}
                     />
                 })}
+                
             </div>
         </div>
     );

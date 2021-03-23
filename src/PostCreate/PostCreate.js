@@ -12,6 +12,7 @@ import Cropper from "cropperjs";
 
 
 import Map from './Map/Map';
+import { mapKey } from '../keys';
 
 
 function PostCreate() {
@@ -108,7 +109,7 @@ function PostCreate() {
                                     // east={east}
                                     className="Map"
                                     setMarkerPosition={setMarkerPosition}
-                                    googleMapURL={"https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=" + process.env.GOOGLE_MAPS_API_KEY}
+                                    googleMapURL={"https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=" + mapKey.google}
                                     loadingElement={<div style={{ height: `100%`, width: `100%` }} />}
                                     containerElement={<div style={{ height: `400px`, width: `100%` }} />}
                                     mapElement={<div

@@ -19,7 +19,7 @@ export const userEditSchema = yup.object().shape({
         // .required("Please submit a valid Email address")
         .test('isUnique', 'This Email is already registered', (value) => isUnique('email', value)),
     bio: yup.string()
-        .max(200)
+        .max(200, 'maybe just the gist?')
 });
 
 
