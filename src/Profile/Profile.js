@@ -41,7 +41,7 @@ function Profile() {
                 username={username}
             />
             <div className="posts-box">
-                {!arePosts && <h2 className="no-posts">Show Us Where You've Been!</h2>}
+                {!arePosts && <a href='/post/create'><h2 className="no-posts">Show Us Where You've Been!</h2></a>}
                 {posts.map((post, index) => {
 
                     return <GalleryImage className="gallery-img"

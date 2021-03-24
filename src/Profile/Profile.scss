@@ -1,3 +1,5 @@
+@import '../sass/abstract/variables.scss';
+
 .Profile {
     display: flex;
     flex-direction: column;
@@ -50,10 +52,18 @@
             justify-content: center;
             align-items: center;
         }
-        .no-posts {
+        a {
             width: 100%;
-            text-align: center;
+            color: $black;
+            .no-posts {
+                width: 100%;
+                text-align: center;
+            }
         }
+        a:hover {
+            color: $green;
+        }
+  
     }
 
     .GalleryImage {}

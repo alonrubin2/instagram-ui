@@ -11,7 +11,6 @@ function HeaderAvatar() {
     const { user, setUser } = useContext(UserContext);
     const history = useHistory();
 
-    console.log(user)
 
     function logout() {
         Cookies.remove('top-user');

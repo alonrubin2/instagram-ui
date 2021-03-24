@@ -17,10 +17,7 @@ function ProfileHeader({ username, postNum }) {
     const { user } = useContext(UserContext);
 
 
-    console.log(viewedUser)
-    console.log(user)
-    console.log(isUser)
-    console.log(username)
+
 
     useEffect(async () => {
         async function getUser() {
@@ -35,9 +32,7 @@ function ProfileHeader({ username, postNum }) {
                     setIsUser(true);
                     return;
                 }
-                console.log(viewedUser)
-                console.log(user)
-                console.log(isUser)
+
 
             } catch (err) {
                 console.log(err)
@@ -47,7 +42,6 @@ function ProfileHeader({ username, postNum }) {
     }, [username, user]);
 
 
-    console.log(isUser)
 
     return (
         <div className="ProfileHeader">

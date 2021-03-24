@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useMemo } from 'react';
 import { ErrorMessage, Field, Formik, Form } from 'formik';
 import { UserService } from '../services/user.service';
 import { useHistory } from 'react-router-dom';
@@ -12,7 +12,7 @@ function EditProfile() {
 
     const history = useHistory();
     const { user, setUser } = useContext(UserContext);
-    const [counter, setCounter] = useState(0);
+
     const [value, setValue] = useState('');
     const [imgPreview, setImgPreview] = useState('')
 
@@ -38,7 +38,9 @@ function EditProfile() {
         history.push('/')
     }
 
-
+    const counter = useMemo(() => {
+        return value.length;
+    }, [value]);
 
 
     return (
@@ -64,7 +66,7 @@ function EditProfile() {
 
                         <div className="form-group">
                             <label htmlFor="bio">Bio</label>
-                            <Field
+                            <Field maxLength='200'
                                 // onChange={(e) => {
                                 // setCounter(counter+1);
                                 // setValue(e.target.value)}}

@@ -11,7 +11,7 @@ function Avatar(props){
 
 
     return (
-            <img className={`Avatar Avatar-${size}`} src={'data:; base64,' + image} alt="avatar" size=""/>
+            <img className={`Avatar Avatar-${size}`} src={props.image? 'data:; base64,' + image : image} alt="avatar" size=""/>
     );
 }
 

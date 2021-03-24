@@ -52,7 +52,6 @@ function App() {
   function isLogged() {
     return Boolean(Object.keys(user).length);
   }
-  console.log(user)
 
 
 
