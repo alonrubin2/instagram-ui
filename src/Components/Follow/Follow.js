@@ -9,7 +9,7 @@ const Follow = ({ userId }) => {
 
     const { user } = useContext(UserContext);
     const myId = user._id;
-    const [follow, setFollow] = useState(null)
+    const [follow, setFollow] = useState(false)
 
 
     async function toggleFollow() {

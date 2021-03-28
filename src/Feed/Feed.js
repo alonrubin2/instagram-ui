@@ -12,7 +12,9 @@ function Feed(props) {
     useEffect(() => {
         PostService.feed()
         .then(posts => setPosts([...posts]));
+        
     }, []);
+
 
     return (
         <div className="Feed">
