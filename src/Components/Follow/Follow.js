@@ -11,7 +11,6 @@ const Follow = ({ userId }) => {
     const myId = user._id;
     const [follow, setFollow] = useState(false)
 
-
     async function toggleFollow() {
         try {
             if (!follow) {

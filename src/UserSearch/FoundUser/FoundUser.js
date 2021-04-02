@@ -11,7 +11,7 @@ function FoundUser(props) {
                 <Avatar image={props.image} size="lg" />
                 <div className="found-text">
                     <strong className="username">{props.username}</strong>
-                    <div className="joined">Joind On <Moment format="MMM DD YYYY">{props.createdAt}</Moment></div>
+                    <div className="joined">Joined On <Moment format="MMM DD YYYY">{props.createdAt}</Moment></div>
                     <p className="bio">{props.bio}</p>
                 </div>
 
