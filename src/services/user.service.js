@@ -9,7 +9,7 @@ export class UserService {
     }
 
     static me() {
-        return fetch(environment.apiUrl + '/user/me', {
+         return fetch(environment.apiUrl + '/user/me', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ export class UserService {
     }
 
     static create(values) {
-       return fetch(environment.apiUrl + '/user', {
+        fetch(environment.apiUrl + '/user', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
