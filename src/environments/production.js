@@ -1,3 +1,3 @@
 export const production = {
-    apiUrl: 'https://tranquil-badlands-59771.herokuapp.com/'
+    apiUrl: 'https://tranquil-badlands-59771.herokuapp.com'
 };
