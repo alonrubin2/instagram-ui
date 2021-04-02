@@ -9,7 +9,8 @@ export class PostService {
                 Authorization: UserService.getToken()
             }
         });
-        return await res.json();
+        const json = await res.json();
+        return json;
         
     }
 
