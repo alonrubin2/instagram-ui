@@ -24,7 +24,7 @@ function Feed(props) {
                     avatar={post.user.avatar}
                     id={post._id}
                     username={post.user.username} 
-                    // userId={post.user._id}
+                    userId={post.user._id}
                     post={post}
                     img={post.image} 
                     description={post.description}

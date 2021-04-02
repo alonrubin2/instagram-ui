@@ -3,13 +3,13 @@ import { UserService } from "./user.service";
 
 export class PostService {
 
-    static feed() {
-        return fetch(environment.apiUrl + '/post?sort=-1', {
+    static async feed() {
+        const res = await fetch(environment.apiUrl + '/post?sort=-1', {
             headers: {
                 Authorization: UserService.getToken()
             }
-        })
-            .then(res => res.json());
+        });
+        return await res.json();
         
     }
 
