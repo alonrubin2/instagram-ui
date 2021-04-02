@@ -4,13 +4,19 @@ import { UserService } from "./user.service";
 export class PostService {
 
     static async feed() {
-        const res = await fetch(environment.apiUrl + '/post?sort=-1', {
-            headers: {
-                Authorization: UserService.getToken()
-            }
-        });
-        const json = await res.json();
-        return json;
+        try {
+            const res = await fetch(environment.apiUrl + '/post?sort=-1', {
+                headers: {
+                    Authorization: UserService.getToken()
+                }
+            });
+            const json = await res.json();
+            return json;
+        }
+        catch(err) {
+            console.log(err)
+        }
+
         
     }
 
