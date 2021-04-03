@@ -10,7 +10,7 @@ function GalleryImage(props) {
     return (
         <div className="GalleryImage">
             <Link to={'/post/' + props.id}>
-                <img src={'data:; base64,' + props.img} />
+                <img src={props.img} />
             </Link>
         </div>
     );
