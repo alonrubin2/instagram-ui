@@ -38,7 +38,7 @@ function Post(props) {
                 <a className="location" href={`https://www.google.com/maps/dir///@${post.north},${post.east},10z/data=!4m2!4m1!3e0`}>where was this taken?</a>
             </div>
             <Link className="link" to={'/post/' + props.id}>
-                <img className="img" src={'data:; base64,' + props.img} />
+                <img className="img" src={props.img} />
             </Link>
 
             <div className="description">{props.description}</div>
