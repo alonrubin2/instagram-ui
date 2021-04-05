@@ -48,7 +48,7 @@ function PostPage() {
                             </a> 
 
                     </div>
-                    <img className="img" src={'data:; base64,' + post.image} />
+                    <img className="img" src={post.image} />
                     <div className="post-page-description">{post.description}</div>
                     <Like post={post} />
                     <Comments postId={post._id} />
