@@ -10,7 +10,7 @@ function Feed(props) {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        PostService.feed()
+        PostService.getAllPosts()
         .then(posts => setPosts([...posts]));
         
     }, []);

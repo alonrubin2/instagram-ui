@@ -7,13 +7,14 @@
 .Header {
   color: $green;
   background-color: $white;
+  top: 0;
   position: fixed;
   // position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   // height: 15%;
-  width: 100%;
+  width: 100vw;
   z-index: 10;
 
   @media (max-width:1024px) {

@@ -63,7 +63,7 @@ function App() {
         { isLogged() && <Header /> }
         <MapContext.Provider value={{ north: '', setNorth}, {east: '', setEast }}>
 
-        <div className="container">
+        <div className="not-container">
           <Switch>
             <Route path="/register">
               <Register />
